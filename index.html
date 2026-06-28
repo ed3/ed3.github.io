@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テスト</title>
+<link href="test.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1>ようこそ！</h1>
+問題数 <select id="no">
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="40">40</option>
+<option value="50">50</option>
+</select>
+<fieldset><legend>Kanji - Romaji</legend>
+<button class="btn" onclick="btnUrl(5,'r')">JLPT 5</button>
+<button class="btn" onclick="btnUrl(4,'r')">JLPT 4</button>
+<button class="btn" onclick="btnUrl(3,'r')">JLPT 3</button>
+<button class="btn" onclick="btnUrl(2,'r')">JLPT 2</button>
+</fieldset>
+<fieldset><legend>Kanji - Hiragana</legend>
+<button class="btn" onclick="btnUrl(5,'h')">JLPT 5</button>
+<button class="btn" onclick="btnUrl(4,'h')">JLPT 4</button>
+<button class="btn" onclick="btnUrl(3,'h')">JLPT 3</button>
+<button class="btn" onclick="btnUrl(2,'h')">JLPT 2</button>
+</fieldset>
+</div>
+<script>
+function btnUrl(l,t) {
+const val = document.getElementById("no").value;
+location.href=`test.html?level=${l}&type=${t}&no=${val}`;
+}
+</script>
+</body>
+</html>
